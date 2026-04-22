@@ -1,0 +1,41 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+.container {
+  max-width: 100%;
+  width: 100%;
+  /* padding: 0 15px; */
+  margin: auto;
+}
+.wrapper {
+  width: 100%;
+  max-width: 370px;
+  overflow: hidden;
+}
+.img-banner {
+  display: none;
+}
+.img-info {
+  width: 100%;
+}
+.img-info h2 {
+  padding: 30px 30px 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 32px;
+  line-height: 36px;
+}
+.img-info p {
+  padding: 0px 10px 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+.web-pic {
+  width: 100%;
+  max-width: 350px;
+  /* height: 300px; */
+  display: block;
+}
