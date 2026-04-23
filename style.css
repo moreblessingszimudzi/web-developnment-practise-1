@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bitcount+Grid+Double:wght@100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Sekuya&display=swap");
 body {
   background-color: black;
   color: white;
@@ -71,6 +72,7 @@ body {
   background-image: url("asserts/images/hero image 2.jpg");
   margin-left: 20px;
   justify-content: space-between;
+  margin-bottom: 150px;
 }
 /* HERO TEXT */
 .hero-text {
@@ -94,10 +96,19 @@ body {
 .hero-button {
   border: none;
   border-radius: 50px;
-  background-color: rgb(61, 50, 132);
-  color: whitesmoke;
+  background-color: rgb(17, 199, 66);
+
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
   padding: 10px 20px;
   cursor: pointer;
+}
+.hero-button:hover {
+  background-color: aqua;
+}
+.hero-button:active {
+  background-color: blue;
+  color: white;
 }
 @media (max-width: 720px) {
   .hero {
@@ -123,6 +134,94 @@ body {
     cursor: pointer;
     margin-top: 20px;
   }
-  .hero-text {
-  }
+}
+/* MY LOGOS */
+/* LOGOS CONTAINER */
+.my-logos {
+  margin-left: 20px;
+}
+
+.my-logos p {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* LOGOS */
+.logos {
+  display: flex;
+  gap: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.logos img {
+  width: 50px;
+}
+/* CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* width: 80%; */
+  gap: 10px;
+  padding: 10px;
+  margin-left: 20px;
+  flex-wrap: wrap;
+}
+/* CARD 1 */
+.card-1 {
+  display: flex;
+  flex-direction: column;
+}
+.card-1 h1 {
+  font-family: "Seyka", sans-serif;
+  padding: 7px;
+}
+/* CARD 1 BUTTON */
+.card-1 button {
+  background-color: rgb(17, 199, 66);
+  border: none;
+  border-radius: 50px;
+  padding: 7px;
+  color: rgb(0, 0, 0);
+  width: 150px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.card-1 button:hover {
+  background-color: aqua;
+}
+.card-1 button:active {
+  background-color: blue;
+  color: white;
+}
+/* CARD 2 */
+.card-2 {
+  display: flex;
+  gap: 10px;
+  align-self: flex-start;
+}
+
+/* ICON */
+.icon {
+  margin-left: 20px;
+  margin-top: 40px;
+}
+.icon svg {
+  width: 40px;
+  height: 40px;
+}
+.card-2-text {
+  padding: 20px;
+  flex: 1;
+  margin-top: 10px;
+}
+.card-2-text h3,
+h4 {
+  text-transform: uppercase;
+  font-family: "Seyka", sans-serif;
+  padding-left: 5px;
+}
+.card-2-text p {
+  padding-left: 5px;
 }
