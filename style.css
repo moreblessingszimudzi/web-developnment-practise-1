@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bitcount+Grid+Double:wght@100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Sekuya&display=swap");
 body {
-  background-color: black;
+  background-color: rgb(15, 14, 14);
   color: white;
   margin: 0;
   padding: 0;
@@ -9,7 +9,8 @@ body {
 .main-container {
   max-width: 100%;
   width: 95%;
-  padding: 20px;
+  padding: 0;
+  margin: 10px auto;
 }
 /* NAV BAR */
 .nav-bar {
@@ -19,13 +20,13 @@ body {
   padding: 5px 10px;
   margin-bottom: 100px;
 
-  margin-left: 20px;
+  margin-left: 0px;
 }
 /* NAV HEADER */
 .nav-header {
   padding: 0;
   margin: 0;
-  padding-left: 20px;
+  padding-left: 0px;
   margin-left: 0px;
 }
 /* NAV LINKS */
@@ -34,10 +35,9 @@ body {
   list-style: none;
   align-items: center;
   gap: 20px;
-  margin-left: auto;
+
   /* padding-left: 20px; */
   /* justify-content: space-between; */
-  margin-right: 10px;
 }
 /* ICONS */
 .icons {
@@ -55,12 +55,12 @@ body {
   }
   .nav-links {
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     gap: 15px;
+    margin-right: auto;
+    display: none;
   }
-  .nav-links.active {
-    display: flex; /* show when clicked */
-  }
+
   .nav-header {
     display: grid;
     align-self: self-start;
@@ -70,14 +70,14 @@ body {
 .hero {
   display: flex;
   background-image: url("asserts/images/hero image 2.jpg");
-  margin-left: 20px;
+  margin-left: 0px;
   justify-content: space-between;
-  margin-bottom: 150px;
+  margin-bottom: 10px;
 }
 /* HERO TEXT */
 .hero-text {
-  padding-left: 30px;
-  margin-left: 10px;
+  padding-left: 0px;
+  margin-left: 0px;
   /* margin-left: 40px; */
 }
 /* HERO IMAGE */
@@ -138,24 +138,28 @@ body {
 /* MY LOGOS */
 /* LOGOS CONTAINER */
 .my-logos {
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 .my-logos p {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 20px;
+  font-family: "Seyka", sans-serif;
+  padding: 5px;
 }
 /* LOGOS */
 .logos {
   display: flex;
-  gap: 100px;
+  gap: 40px;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 40px;
 }
 .logos img {
   width: 50px;
+  padding: 5px;
+  margin: 5px;
 }
 /* CARDS */
 
@@ -167,7 +171,16 @@ body {
   padding: 10px;
   margin-left: 20px;
   margin-bottom: 100px;
+  overflow: hidden;
 }
+@media (max-width: 720px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
+
 /* CARD 1 */
 .card-1 {
   display: flex;
@@ -179,6 +192,7 @@ body {
 .card-1 h1 {
   font-family: "Seyka", sans-serif;
   padding: 10px;
+  margin-bottom: 50pxs;
 }
 /* CARD 1 BUTTON */
 .card-1 button {
@@ -190,6 +204,7 @@ body {
   width: 150px;
   cursor: pointer;
   margin-left: 10px;
+  margin-bottom: 10px;
 }
 .card-1 button:hover {
   background-color: aqua;
@@ -241,7 +256,7 @@ h4 {
   border: 2px solid rgb(0, 255, 64);
 }
 /* SECTION 2 */
-
+/* MAIN CONTAINER-2 */
 .main-container-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -250,6 +265,16 @@ h4 {
   background-image: url("asserts/images/hero image 2.jpg");
   margin-bottom: 100px;
 }
+@media (max-width: 720px) {
+  .main-container-2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin-left: 20px;
+  }
+}
+
+/* SECTION 1 */
 .section-1 {
   border: none;
   display: flex;
@@ -259,7 +284,10 @@ h4 {
 .section-1 h1 {
   margin-left: 10px;
   width: 250px;
+  margin-bottom: 50px;
+  font-family: "Seyka", sans-serif;
 }
+/* SECTION 2 BUTTON */
 .section-1 button {
   background-color: rgb(17, 199, 66);
   border: none;
@@ -278,6 +306,7 @@ h4 {
   background-color: blue;
   color: white;
 }
+/* SECTION 2 */
 .section-2 {
   display: flex;
   border: 2px solid blue;
@@ -285,8 +314,8 @@ h4 {
   max-width: 100%;
   flex-wrap: wrap;
 }
+/* NAV-BAR-2 */
 .nav-bar-2 {
-  /* background-color: brown; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -297,6 +326,7 @@ h4 {
   gap: 10px;
   display: none;
 }
+/* NAV LINKS-2 */
 
 .nav-links-2 {
   display: flex;
@@ -307,6 +337,7 @@ h4 {
   flex-wrap: wrap;
   /* margin-top: 20px; */
 }
+/* NAN-LINKS-2 BUTTON */
 .nav-links-2 button {
   background-color: rgb(211, 218, 213);
   border: none;
@@ -318,6 +349,7 @@ h4 {
   margin-left: 10px;
   margin-bottom: 10px;
 }
+/* SECTION-2-TEXT */
 .section-2-text {
   display: flex;
   flex-direction: column;
@@ -333,6 +365,7 @@ h4 {
   padding: 10px;
   margin-bottom: 30px;
 }
+/* SECTION 2 VIDEO */
 .web-video {
   display: flex;
   justify-content: center;
@@ -345,13 +378,24 @@ h4 {
   border-radius: 10px;
   padding: 10px;
 }
+/* SECTION 3 */
 .section-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   padding: 10px;
   margin-left: 20px;
+  margin-bottom: 50px;
 }
+@media (max-width: 720px) {
+  .section-3 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    padding: 10px;
+  }
+}
+
 .icons {
   padding: 10px;
 }
@@ -362,8 +406,71 @@ svg {
 .content-h3 {
   padding: 10px 5px;
   margin: 5px;
+  font-family: "Seyka", sans-serif;
 }
 .content-p {
   padding: 10px 5px;
   margin: 5px;
+}
+/* SECTION 4 */
+/* WORKERS CONTAINER */
+.workers-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-rows: 220px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  background-image: url("asserts/images/hero image 2.jpg");
+}
+@media (max-width: 720px) {
+  .workers-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: 220px;
+  }
+}
+
+.workers-container div:first-child {
+  grid-column: span 2;
+}
+.first-child h2 {
+  width: 200px;
+  line-height: 30px;
+  margin-left: 10px;
+  font-family: "Seyka", sans-serif;
+}
+/* WORKERS CONTAINER BUTTON */
+.workers-container-button {
+  background-color: rgb(17, 199, 66);
+  border: none;
+  border-radius: 50px;
+  padding: 7px;
+  color: rgb(0, 0, 0);
+  width: 150px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.workers-container-button:hover {
+  background-color: aqua;
+}
+.workers-container-button:active {
+  background-color: blue;
+  color: white;
+}
+/* WORKERS IMAGES */
+.worker-image {
+  /* width: 100%; */
+  /* height: 100%; */
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
+  display: block;
+  margin-left: 5px;
+  margin-top: 10px;
+  padding: 5px;
 }
