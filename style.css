@@ -192,7 +192,16 @@ body {
 .card-1 h1 {
   font-family: "Seyka", sans-serif;
   padding: 10px;
-  margin-bottom: 50pxs;
+  margin-bottom: 50px;
+  background: linear-gradient(
+    to left,
+    rgb(208, 12, 215),
+    rgb(14, 219, 45),
+    rgb(193, 15, 187)
+  );
+  display: inline-block;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /* CARD 1 BUTTON */
 .card-1 button {
@@ -264,6 +273,17 @@ h4 {
   margin-left: 0px;
   background-image: url("asserts/images/hero image 2.jpg");
   margin-bottom: 10px;
+}
+.section-1 h1 {
+  background: linear-gradient(
+    to left,
+    rgb(208, 12, 215),
+    rgb(14, 219, 45),
+    rgb(193, 15, 187)
+  );
+  display: inline-block;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 720px) {
   .main-container-2 {
@@ -545,4 +565,105 @@ h5 {
     bottom: -0px;
     right: 50px;
   }
+}
+
+.bottom-section {
+  background: linear-gradient(to right, blue, black, green);
+  align-items: center;
+}
+.newslatter-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+@media (max-width: 720px) {
+  .newslatter-box {
+    flex-direction: column;
+  }
+  .newslatter-box h2 {
+    margin-right: 0;
+  }
+}
+.newslatter-box h2 {
+  justify-content: flex-start;
+  font-size: 30px;
+  margin-right: auto;
+  font-family: "Seyka", sans-serif;
+  background: linear-gradient(
+    to left,
+    rgb(208, 12, 215),
+    rgb(99, 165, 6),
+    rgb(193, 15, 187)
+  );
+  display: inline-block;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.newslatter-box input {
+  border: 5px solid black;
+  border-radius: 40px;
+  padding: 10px;
+  width: 200px;
+  height: 10px;
+  color: white;
+  background-color: black;
+  margin-top: 20px;
+}
+.footer-button {
+  border-radius: 40px;
+  padding: 10px;
+  width: 150px;
+  height: 40px;
+  color: white;
+  background: linear-gradient(
+    to left,
+    blue,
+    rgb(20, 20, 20),
+    rgb(193, 15, 187)
+  );
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+.middle-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.middle-content h3 {
+  font-family: "Seyka", sans-serif;
+  background: linear-gradient(
+    to left,
+    rgb(208, 12, 215),
+    rgb(14, 219, 45),
+    rgb(193, 15, 187)
+  );
+  display: inline-block;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer h1 {
+  background: linear-gradient(
+    to left,
+    rgb(208, 12, 215),
+    rgb(14, 219, 45),
+    rgb(193, 15, 187)
+  );
+  display: inline-block;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer-links {
+  padding: 10px;
+  margin: 20px;
+}
+.social-icons {
+  padding: 10px;
+  margin: 20px;
 }
