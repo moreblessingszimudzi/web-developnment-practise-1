@@ -353,8 +353,8 @@ h4 {
 .section-2-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
+  /* justify-content: flex-end; */
 }
 .section-2-text h3 {
   margin-top: 20px;
@@ -368,7 +368,7 @@ h4 {
 /* SECTION 2 VIDEO */
 .web-video {
   display: flex;
-  justify-content: center;
+  /* justify-content: flex-end; */
 }
 
 .web-video video {
@@ -444,10 +444,11 @@ svg {
 /* WORKERS CONTAINER BUTTON */
 .workers-container-button {
   background-color: rgb(17, 199, 66);
+  /* background: linear-gradient(to right, green, yellow, green); */
   border: none;
   border-radius: 50px;
   padding: 7px;
-  color: rgb(0, 0, 0);
+  color: rgb(231, 231, 235);
   width: 150px;
   cursor: pointer;
   margin-left: 10px;
@@ -455,6 +456,8 @@ svg {
 }
 .workers-container-button:hover {
   background-color: aqua;
+  color: black;
+  opacity: 0.7;
 }
 .workers-container-button:active {
   background-color: blue;
@@ -478,41 +481,68 @@ svg {
 /* BLACK CARD */
 .black-card {
   /* background-image: url("asserts/images/hero image 2.jpg"); */
-  background: linear-gradient(to right, blue, rgb(20, 20, 20), rgb(0, 255, 55));
-  display: flex;
-  justify-content: space-between;
+  background: linear-gradient(
+    to right,
+    rgb(0, 255, 34),
+    rgb(20, 20, 20),
+    rgb(26, 10, 208)
+  );
+
   align-items: center;
-  /* flex-wrap: wrap; */
 }
 .black-card h1 {
-  /* position: absolute; */
-  top: 20px;
-  left: 50px;
   font-size: 60px;
-  opacity: 0.5;
-  width: 1 rem;
+  opacity: 0.2;
+  /* width: 1 rem; */
+  text-align: center;
+}
+.blue-card-content {
+  display: flex;
+  /* background-color: red; */
+  justify-content: space-between;
 }
 .blue-card-images {
   position: relative;
 }
 .image-1 {
-  width: 200px;
+  width: 160px;
   border-radius: 50%;
+  position: relative;
 }
 .image-2 {
-  width: 120px;
+  width: 100px;
   border-radius: 50%;
-  position: absolutes;
-  bottom: -20px;
+  position: absolute;
+  bottom: -0px;
   right: -30px;
 }
 .black-card-text {
   max-width: 400px;
 }
-.black-card-text h4 {
+.black-card-text h4,
+h5 {
   margin-bottom: 10px;
+  font-family: "Seyka", sans-serif;
 }
 .black-card-text p {
   font-size: 14px;
   color: #cbd5e1;
+}
+@media (max-width: 720px) {
+  .blue-card-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .image-1 {
+    width: 190px;
+    border-radius: 50%;
+    position: relative;
+  }
+  .image-2 {
+    width: 120px;
+    border-radius: 50%;
+    position: relative;
+    bottom: -0px;
+    right: 50px;
+  }
 }
