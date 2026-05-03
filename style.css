@@ -583,7 +583,7 @@ svg {
   -webkit-text-fill-color: transparent;
 }
 .overlay-text p:first-child:hover {
-  /* z-index: 10; */
+  z-index: 10;
   /* width: 120px; */
   /* box-shadow: 10px 10px 30px rgba(153, 255, 0, 0.5); */
   background: linear-gradient(to right, rgb(0, 128, 255), rgb(255, 0, 0));
