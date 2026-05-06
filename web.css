@@ -73,7 +73,7 @@ body {
   height: 80vh;
   background-repeat: no-repeat;
   background-size: cover;
-  /* margin: 10px; */
+  margin: 10px 20px;
   padding: 10px;
   border-radius: 30px;
 }
@@ -125,5 +125,35 @@ body {
   justify-content: center;
   background-color: black;
   color: white;
+  border-radius: 50%;
+}
+/* HERO CARDS */
+.hero-cards {
+  position: absolute;
+  bottom: -95%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.card {
+  /* Glass effect */
+  background: rgba(0, 128, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+.left-card {
+  display: flex;
+}
+
+.left-card img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.left-card-text {
+}
+.right-card {
+}
+.myself-image {
+  height: 50px;
   border-radius: 50%;
 }
