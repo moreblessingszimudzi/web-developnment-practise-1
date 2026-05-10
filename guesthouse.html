@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="house.css" />
+    <link rel="stylesheet" href="guesthouse.css" />
   </head>
   <body>
+    <!-- MAIN CONTAINER -->
     <div class="main-container">
       <nav class="nav-bar">
         <div class="logo">
           <img class="nav-logo" src="asserts\images\logo.jpg" alt="" />
           <h3>INTERIOR DESIGN</h3>
         </div>
+        <!-- NAV LINKS -->
         <ul class="nav-links">
           <li><a href="#">HOME</a></li>
           <li><a href="#">FAQ</a></li>
@@ -23,6 +25,7 @@
       </nav>
       <!-- HERO SECTION -->
       <section class="hero">
+        <!-- HERO CONTENT -->
         <div class="hero-content">
           <p>WELCOME TO INTERIOR DESIGN</p>
           <h1>
@@ -42,7 +45,9 @@
         </div>
       </section>
       <!-- SECTION 2 -->
+      <!-- TOP SECTION -->
       <section class="top-section">
+        <!-- TOP HEADING -->
         <div class="top-heading">
           <h1>
             WE MADE <br />MODERN & CREATIVE <br />
@@ -65,7 +70,7 @@
             <img src="asserts\images\interior.jpg" alt="" />
           </div>
         </div>
-
+        <!-- BOTTOM PART -->
         <div class="bottom-part">
           <button>GET STARTED</button>
           <p>
@@ -172,6 +177,7 @@
          -->
         <!-- SECTION 3 TEXT -->
         <div class="section-3-text">
+          <!-- SECTION 3 HEADING -->
           <div class="section-3-heading">
             <h1>
               WE PROVIDE YOU THE <br />
@@ -187,17 +193,70 @@
         <!-- SECTION 3 IMAGES -->
 
         <div class="section-3-images">
+          <!-- IMAGE 1 -->
           <div class="section-3-image-card">
             <img src="asserts\images\interior 4.jpg" alt="" />
           </div>
+          <!-- IMAGE 2 -->
           <div class="section-3-image-card">
             <img src="asserts\images\interior 5.jpg" alt="" />
           </div>
+          <!-- IMAGE 3 -->
           <div class="section-3-image-card">
-            <img src="asserts\images\interior 6.jpg" alt="" />
+            <img src="asserts\images\interior 5.jpg" alt="" />
           </div>
         </div>
       </section>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".section-3-images");
+        if (!carousel) return;
+
+        const items = Array.from(carousel.children);
+        if (items.length < 2) return;
+
+        const gap = parseInt(getComputedStyle(carousel).gap, 10) || 0;
+        const slideWidth = items[0].offsetWidth + gap;
+
+        const firstClone = items[0].cloneNode(true);
+        const lastClone = items[items.length - 1].cloneNode(true);
+
+        carousel.appendChild(firstClone);
+        carousel.insertBefore(lastClone, carousel.firstChild);
+
+        carousel.scrollLeft = slideWidth;
+
+        let isSnapping = false;
+        carousel.addEventListener("scroll", function () {
+          if (isSnapping) return;
+          window.clearTimeout(carousel._snapTimeout);
+          carousel._snapTimeout = window.setTimeout(function () {
+            const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+            if (carousel.scrollLeft <= 0) {
+              isSnapping = true;
+              carousel.scrollLeft = maxScroll - slideWidth;
+              requestAnimationFrame(() => {
+                isSnapping = false;
+              });
+            } else if (carousel.scrollLeft >= maxScroll) {
+              isSnapping = true;
+              carousel.scrollLeft = slideWidth;
+              requestAnimationFrame(() => {
+                isSnapping = false;
+              });
+            }
+          }, 120);
+        });
+      });
+    </script>
   </body>
 </html>
+
+<!-- 
+
+ 1. Horizontal Scroll of divs/images
+ 2.Css animation
+
+-->
