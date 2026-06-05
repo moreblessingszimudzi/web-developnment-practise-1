@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bitcount+Grid+Double:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Sekuya&display=swap");
+
 body {
   margin: 0;
   padding: 0;
@@ -136,10 +138,39 @@ button {
 .button-1 {
   background-color: blue;
   color: white;
+  transition: 0.5s;
 }
+.button-1:hover {
+  cursor: pointer;
+  background-color: azure;
+  color: black;
+}
+.button-1:active {
+  background-color: blue;
+  color: aliceblue;
+}
+.button-2 {
+  background-color: azure;
+  color: black;
+  transition: 0.5s;
+}
+.button-2:hover {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+}
+.button-2:active {
+  background-color: white;
+  color: black;
+}
+
 /* SECTION 2 */
 .section-2 {
   background-color: rgb(233, 238, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .top-content {
   display: flex;
@@ -165,16 +196,129 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  align-content: center;
+  border-radius: none;
 }
-.card-1-content {
+.cards {
   /* background-color: blue; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
+  font-family: "Roboto", sans-serif;
+  background-color: azure;
+  border-radius: 20px;
+  border: 0.5px solid black;
+  margin: 10px;
+}
+
+@media (max-width: 720px) {
+  .cards-container {
+    /* background-color: blue; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    background-color: azure;
+
+    border: 0.5px solid black;
+  }
+}
+.cards:hover {
+  transform: scale(1.03);
 }
 svg {
   width: 100px;
   height: 80px;
+  color: blue;
+  opacity: 0.7;
+}
+/* SECTION 2 BUTTON */
+.section-2 button {
+  background-color: blue;
+  color: aliceblue;
+  width: 170px;
+  margin: 20px;
+  padding: 10px;
+  border: none;
+  transition: 0.3s;
+}
+.section-2 button:hover {
+  cursor: pointer;
+  background-color: azure;
+  color: black;
+}
+.section-2 button:active {
+  background-color: blue;
+  color: aliceblue;
+}
+/* SECTION 3 */
+.section-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+/* SECTION 3 TOP */
+.section-3-top {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-content: center;
+  justify-items: center;
+  margin: 10px;
+}
+.section-3-top p {
+  color: rgb(4, 72, 135);
+  padding: 5px;
+  margin: 10px;
+}
+.section-3-top h2 {
+  padding: 5px;
+  text-transform: uppercase;
+  margin: 10px;
+}
+/* SECTION 3 CARDS */
+.section-3-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+@media (max-width: 720px) {
+  .section-3-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+}
+.card-container :hover {
+  transform: scale(1.05);
+}
+
+.card-container h4 {
+  padding: 10px;
+  text-decoration: solid;
+  font-size: 20px;
+  margin: 10px;
+}
+.card-container p {
+  line-height: 1.3rem;
+  word-spacing: 3px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.card-wrapper:hover {
+  transform: scale(1.03);
 }
