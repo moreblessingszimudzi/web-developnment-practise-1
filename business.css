@@ -166,11 +166,12 @@ button {
 
 /* SECTION 2 */
 .section-2 {
-  background-color: rgb(233, 238, 238);
+  /* background-color: rgb(233, 238, 238); */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(to right, lightgray, gray);
 }
 .top-content {
   display: flex;
@@ -211,6 +212,34 @@ button {
   border-radius: 20px;
   border: 0.5px solid black;
   margin: 10px;
+  perspective: 1000px;
+}
+.cards:hover {
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  /*animation name*/
+  0% {
+    transform: rotate3d(1, 0, 0, 0); /* normal position*/
+  }
+
+  50% {
+    /*halfway through the animation*/
+    transform: rotate3d(
+      1,
+      1,
+      0,
+      15deg
+    ); /*size of how you want the animation to move*/
+  }
+
+  100% {
+    /*100% means the end of the animation and the animation returns to its original position*/
+    transform: rotate3d(1, 0, 0, 0);
+  }
 }
 
 @media (max-width: 720px) {
@@ -226,9 +255,7 @@ button {
     border: 0.5px solid black;
   }
 }
-.cards:hover {
-  transform: scale(1.03);
-}
+
 svg {
   width: 100px;
   height: 80px;
@@ -261,6 +288,7 @@ svg {
   justify-content: center;
   align-items: center;
   background-color: lightgray;
+  /* background: linear-gradient(lightgray, gray); */
 }
 /* SECTION 3 TOP */
 .section-3-top {
@@ -304,6 +332,7 @@ svg {
 }
 .card-container :hover {
   transform: scale(1.05);
+  transform: rotateY(360deg);
 }
 
 .card-container h4 {
